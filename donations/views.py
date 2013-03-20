@@ -113,7 +113,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
 
             # redirect to online payment or confirmation page
             if donation.payment_method.lower() in ['cc', 'credit card']:
-                return HttpResponseRedirect(reverse('payments.views.pay_online', args=[invoice.id, invoice.guid]))
+                return HttpResponseRedirect(reverse('payment.pay_online', args=[invoice.id, invoice.guid]))
             else:
                 return HttpResponseRedirect(reverse('donation.add_confirm', args=[donation.id]))
     else:

@@ -92,7 +92,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
 
             # send notification to administrators
             # get admin notice recipients
-            if not donation.payment_method.lower() in ['cc', 'credit card']:
+            if not donation.payment_method.lower() in ['cc', 'credit card', 'paypal']:
                 # email to admin (if payment type is credit card email is not sent until payment confirmed)
                 recipients = get_notice_recipients('module', 'donations', 'donationsrecipients')
                 if recipients:
@@ -112,7 +112,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
             EventLog.objects.log(instance=donation)
 
             # redirect to online payment or confirmation page
-            if donation.payment_method.lower() in ['cc', 'credit card', 'paypal']:
+            if donation.payment_method.lower() in ['cc', 'credit card']:
                 return HttpResponseRedirect(reverse('payment.pay_online', args=[invoice.id, invoice.guid]))
             else:
                 return HttpResponseRedirect(reverse('donation.add_confirm', args=[donation.id]))

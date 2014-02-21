@@ -112,7 +112,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
             EventLog.objects.log(instance=donation)
 
             # redirect to online payment or confirmation page
-            if donation.payment_method.lower() in ['cc', 'credit card']:
+            if donation.payment_method.lower() in ['cc', 'credit card', 'paypal']:
                 return HttpResponseRedirect(reverse('payment.pay_online', args=[invoice.id, invoice.guid]))
             else:
                 return HttpResponseRedirect(reverse('donation.add_confirm', args=[donation.id]))

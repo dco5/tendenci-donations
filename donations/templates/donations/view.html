@@ -24,7 +24,7 @@
 {% endif %}
 <div class="label">Invoice ID:</div>
 {% if donation.invoice %}
-	<div><a href="{% url invoices.views.view donation.invoice.id %}">{{ donation.invoice.id }}</a></div>
+	<div><a href="{% url invoice.view donation.invoice.id %}">{{ donation.invoice.id }}</a></div>
 {% else %}
 	<div>n/a</div>
 {% endif %}

@@ -25,7 +25,7 @@ except:
 def add(request, form_class=DonationForm, template_name="donations/add.html"):
     if request.method == "POST":
         form = form_class(request.POST, user=request.user)
-        
+
         if form.is_valid():
             donation = form.save(commit=False)
             donation.payment_method = donation.payment_method.lower()
@@ -53,7 +53,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
                 user.set_password(User.objects.make_random_password(length=8))
                 user.is_active = 0
                 user.save()
-                
+
                 profile_kwarg = {'user':user,
                                  'company':donation.company,
                                  'address':donation.address,
@@ -76,14 +76,14 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
                     
                 profile = Profile.objects.create(**profile_kwarg)
                 profile.save()
-                
+
             donation.save(user)
-            
+
             # create invoice
             invoice = donation_inv_add(user, donation)
             # updated the invoice_id for mp, so save again
             donation.save(user)
-            
+
             if request.user.profile.is_superuser: 
                 if donation.payment_method in ['paid - check', 'paid - cc']:
                     # the admin accepted payment - mark the invoice paid
@@ -103,7 +103,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
                             'request': request,
                         }
                         notification.send_emails(recipients,'donation_added', extra_context)
-            
+
             # email to user 
             email_receipt = form.cleaned_data['email_receipt']
             if email_receipt:
@@ -121,14 +121,16 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
 
     currency_symbol = get_setting("site", "global", "currencysymbol")
     if not currency_symbol: currency_symbol = "$"
-       
+
     return render_to_response(template_name, {'form':form, 'currency_symbol': currency_symbol}, 
         context_instance=RequestContext(request))
-    
+
+
 def add_confirm(request, id, template_name="donations/add_confirm.html"):
     donation = get_object_or_404(Donation, pk=id)
     EventLog.objects.log(instance=donation)
     return render_to_response(template_name, context_instance=RequestContext(request))
+
 
 @login_required
 def detail(request, id=None, template_name="donations/view.html"):
@@ -140,7 +142,8 @@ def detail(request, id=None, template_name="donations/view.html"):
     donation.donation_amount = tcurrency(donation.donation_amount)
     return render_to_response(template_name, {'donation':donation}, 
         context_instance=RequestContext(request))
-    
+
+
 def receipt(request, id, guid, template_name="donations/receipt.html"):
     donation = get_object_or_404(Donation, pk=id, guid=guid)
 
@@ -152,8 +155,9 @@ def receipt(request, id, guid, template_name="donations/receipt.html"):
         template_name="donations/view.html"
     return render_to_response(template_name, {'donation':donation}, 
         context_instance=RequestContext(request))
-  
-@login_required  
+
+
+@login_required
 def search(request, template_name="donations/search.html"):
     query = request.GET.get('q', None)
     if get_setting('site', 'global', 'searchindex') and query:

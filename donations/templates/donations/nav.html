@@ -11,6 +11,7 @@
 	{% has_perm user donations.change_donation as can_edit_donation %}
 {% endif %}
 
+{% if not SITE_GLOBAL_HIDEALLTABS %}
 <ul id="module-tabs" class="tabs">
 {% if user.is_authenticated and not SITE_GLOBAL_HIDETENDENCITABS %}
 <li class="dropdown" data-dropdown="dropdown">
@@ -36,7 +37,7 @@
     {% endif %}
         {% if can_edit_setting %}
             <li><a href="{% url settings.index "module" "donations" %}">{% trans "Settings" %}</a></li>
-            <li><a href="{% url donation.search %}">Search</a></li> 
+            <li><a href="{% url donation.search %}">Search</a></li>
             <li><a href="{% url donation.add %}">Add</a></li>
         {% endif %}
     </ul>
@@ -54,3 +55,4 @@
     </div>
 </li>
 </ul>
+{% endif %}

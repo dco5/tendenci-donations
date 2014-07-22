@@ -1,12 +1,14 @@
 *.pyc
 # Exclude . files
 *.
+.*
 
 # except for .gitignore
 !.gitignore
 
+# except for .tx
+!.tx/
+
 /*.egg-info
 /dist
 /build
-.*
-

@@ -8,6 +8,9 @@
 
 # except for .tx
 !.tx/
+# except for .travis.yml
+!.travis.yml
+
 
 /*.egg-info
 /dist

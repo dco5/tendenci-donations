@@ -8,6 +8,7 @@ from donations.forms import DonationForm
 from donations.utils import donation_inv_add, donation_email_user
 from donations.models import Donation
 from tendenci.core.site_settings.utils import get_setting
+from tendenci.core.base.forms import CaptchaForm
 from tendenci.core.base.http import Http403
 from tendenci.core.base.utils import tcurrency
 from tendenci.core.event_logs.models import EventLog
@@ -23,10 +24,15 @@ except:
 
 
 def add(request, form_class=DonationForm, template_name="donations/add.html"):
+    use_captcha = get_setting('site', 'global', 'captcha')
+
     if request.method == "POST":
         form = form_class(request.POST, user=request.user)
+        captcha_form = CaptchaForm(request.POST)
+        if not use_captcha:
+            del captcha_form.fields['captcha']
 
-        if form.is_valid():
+        if form.is_valid() and captcha_form.is_valid():
             donation = form.save(commit=False)
             donation.payment_method = donation.payment_method.lower()
             # we might need to create a user record if not exist
@@ -73,7 +79,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
                     profile_kwarg['creator_username'] = request.user.username
                     profile_kwarg['owner'] = request.user
                     profile_kwarg['owner_username'] = request.user.username
-                    
+
                 profile = Profile.objects.create(**profile_kwarg)
                 profile.save()
 
@@ -84,7 +90,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
             # updated the invoice_id for mp, so save again
             donation.save(user)
 
-            if request.user.profile.is_superuser: 
+            if request.user.profile.is_superuser:
                 if donation.payment_method in ['paid - check', 'paid - cc']:
                     # the admin accepted payment - mark the invoice paid
                     invoice.tender(request.user)
@@ -104,7 +110,7 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
                         }
                         notification.send_emails(recipients,'donation_added', extra_context)
 
-            # email to user 
+            # email to user
             email_receipt = form.cleaned_data['email_receipt']
             if email_receipt:
                 donation_email_user(request, donation, invoice)
@@ -118,11 +124,17 @@ def add(request, form_class=DonationForm, template_name="donations/add.html"):
                 return HttpResponseRedirect(reverse('donation.add_confirm', args=[donation.id]))
     else:
         form = form_class(user=request.user)
+        captcha_form = CaptchaForm()
+
 
     currency_symbol = get_setting("site", "global", "currencysymbol")
     if not currency_symbol: currency_symbol = "$"
 
-    return render_to_response(template_name, {'form':form, 'currency_symbol': currency_symbol}, 
+    return render_to_response(template_name, {
+        'form':form,
+        'captcha_form' : captcha_form,
+        'use_captcha' : use_captcha,
+        'currency_symbol': currency_symbol},
         context_instance=RequestContext(request))
 
 
@@ -140,7 +152,7 @@ def detail(request, id=None, template_name="donations/view.html"):
     EventLog.objects.log(instance=donation)
 
     donation.donation_amount = tcurrency(donation.donation_amount)
-    return render_to_response(template_name, {'donation':donation}, 
+    return render_to_response(template_name, {'donation':donation},
         context_instance=RequestContext(request))
 
 
@@ -153,7 +165,7 @@ def receipt(request, id, guid, template_name="donations/receipt.html"):
 
     if (not donation.invoice) or donation.invoice.balance > 0 or (not donation.invoice.is_tendered):
         template_name="donations/view.html"
-    return render_to_response(template_name, {'donation':donation}, 
+    return render_to_response(template_name, {'donation':donation},
         context_instance=RequestContext(request))
 
 
@@ -167,5 +179,5 @@ def search(request, template_name="donations/search.html"):
 
     EventLog.objects.log()
 
-    return render_to_response(template_name, {'donations':donations}, 
+    return render_to_response(template_name, {'donations':donations},
         context_instance=RequestContext(request))

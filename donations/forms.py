@@ -7,21 +7,21 @@ from tendenci.core.site_settings.utils import get_setting
 
 class DonationAdminForm(forms.ModelForm):
     # get the payment_method choices from settings
-    donation_amount = forms.CharField(error_messages={'required': 'Please enter the donation amount.'})
-    payment_method = forms.CharField(error_messages={'required': 'Please select a payment method.'},
-                                     widget=forms.RadioSelect(choices=(('check-paid', 'Paid by Check'), 
-                                                              ('cc', 'Make Online Payment'),)), initial='cc', )
+    donation_amount = forms.CharField(error_messages={'required': _('Please enter the donation amount.')})
+    payment_method = forms.CharField(error_messages={'required': _('Please select a payment method.')},
+                                     widget=forms.RadioSelect(choices=(('check-paid', _('Paid by Check')),
+                                                              ('cc', _('Make Online Payment')),)), initial='cc', )
     company = forms.CharField(max_length=50, required=False, widget=forms.TextInput(attrs={'size':'30'}))
     address = forms.CharField(max_length=100, required=False, widget=forms.TextInput(attrs={'size':'35'}))
     state = forms.CharField(max_length=50, required=False,  widget=forms.TextInput(attrs={'size':'5'}))
     zip_code = forms.CharField(max_length=20, required=False, widget=forms.TextInput(attrs={'size':'10'}))
     referral_source = forms.CharField(max_length=200, required=False, widget=forms.TextInput(attrs={'size':'40'}))
-    email = forms.EmailField(help_text='A valid e-mail address, please.')
+    email = forms.EmailField(help_text=_('A valid e-mail address, please.'))
     email_receipt = forms.BooleanField(initial=True)
     comments = forms.CharField(max_length=1000, required=False,
                                widget=forms.Textarea(attrs={'rows':'3'}))
     allocation = forms.ChoiceField()
-    
+
     class Meta:
         model = Donation
         fields = ('donation_amount',
@@ -42,7 +42,7 @@ class DonationAdminForm(forms.ModelForm):
                   'referral_source',
                   'comments',
                   )
-        
+
     def __init__(self, *args, **kwargs):
         if 'user' in kwargs:
             self.user = kwargs.pop('user', None)
@@ -53,33 +53,33 @@ class DonationAdminForm(forms.ModelForm):
         preset_amount_str = (get_setting('module', 'donations', 'donationspresetamounts')).strip('')
         if preset_amount_str:
             self.fields['donation_amount'] = forms.ChoiceField(choices=get_preset_amount_choices(preset_amount_str))
-            
-            
+
+
     def clean_donation_amount(self):
         try:
             if float(self.cleaned_data['donation_amount']) <= 0:
                 raise forms.ValidationError(_(u'Please enter a positive number'))
         except:
-            raise forms.ValidationError(_(u'Please enter a numeric positive number'))                       
+            raise forms.ValidationError(_(u'Please enter a numeric positive number'))
         return self.cleaned_data['donation_amount']
-    
+
 class DonationForm(forms.ModelForm):
     # get the payment_method choices from settings
-    donation_amount = forms.CharField(error_messages={'required': 'Please enter the donation amount.'})
-    payment_method = forms.CharField(error_messages={'required': 'Please select a payment method.'},
-                                     widget=forms.RadioSelect(choices=(('check-paid', 'Paid by Check'), 
-                                                              ('cc', 'Make Online Payment'),)), initial='cc', )
+    donation_amount = forms.CharField(error_messages={'required': _('Please enter the donation amount.')})
+    payment_method = forms.CharField(error_messages={'required': _('Please select a payment method.')},
+                                     widget=forms.RadioSelect(choices=(('check-paid', _('Paid by Check')),
+                                                              ('cc', _('Make Online Payment')),)), initial='cc', )
     company = forms.CharField(max_length=50, required=False, widget=forms.TextInput(attrs={'size':'30'}))
     address = forms.CharField(max_length=100, required=False, widget=forms.TextInput(attrs={'size':'35'}))
     state = forms.CharField(max_length=50, required=False,  widget=forms.TextInput(attrs={'size':'5'}))
     zip_code = forms.CharField(max_length=20, required=False, widget=forms.TextInput(attrs={'size':'10'}))
     referral_source = forms.CharField(max_length=200, required=False, widget=forms.TextInput(attrs={'size':'40'}))
-    email = forms.EmailField(help_text='A valid e-mail address, please.')
+    email = forms.EmailField(help_text=_('A valid e-mail address, please.'))
     email_receipt = forms.BooleanField(initial=True)
     comments = forms.CharField(max_length=1000, required=False,
                                widget=forms.Textarea(attrs={'rows':'3'}))
     allocation = forms.ChoiceField()
-    
+
     class Meta:
         model = Donation
         fields = ('donation_amount',
@@ -100,7 +100,7 @@ class DonationForm(forms.ModelForm):
                   'referral_source',
                   'comments',
                   )
-        
+
     def __init__(self, *args, **kwargs):
         if 'user' in kwargs:
             self.user = kwargs.pop('user', None)
@@ -125,7 +125,7 @@ class DonationForm(forms.ModelForm):
                     self.fields['phone'].initial = profile.phone
             except:
                 pass
-            
+
         self.fields['payment_method'].widget = forms.RadioSelect(choices=get_payment_method_choices(self.user))
         allocation_str = get_setting('module', 'donations', 'donationsallocations')
         if allocation_str:
@@ -135,14 +135,13 @@ class DonationForm(forms.ModelForm):
         preset_amount_str = (get_setting('module', 'donations', 'donationspresetamounts')).strip('')
         if preset_amount_str:
             self.fields['donation_amount'] = forms.ChoiceField(choices=get_preset_amount_choices(preset_amount_str))
-            
-            
+
+
     def clean_donation_amount(self):
         #raise forms.ValidationError(_(u'This username is already taken. Please choose another.'))
         try:
             if float(self.cleaned_data['donation_amount']) <= 0:
                 raise forms.ValidationError(_(u'Please enter a positive number'))
         except:
-            raise forms.ValidationError(_(u'Please enter a numeric positive number'))                       
+            raise forms.ValidationError(_(u'Please enter a numeric positive number'))
         return self.cleaned_data['donation_amount']
-        

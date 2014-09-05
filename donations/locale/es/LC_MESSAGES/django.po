@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# ediaz <ednadiaz0@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-12 20:53+0000\n"
-"PO-Revision-Date: 2014-08-11 23:12+0000\n"
-"Last-Translator: Team Tendenci <programmers@tendenci.com>\n"
+"PO-Revision-Date: 2014-09-04 17:01+0000\n"
+"Last-Translator: ediaz <ednadiaz0@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/tendenci/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,39 +20,39 @@ msgstr ""
 
 #: forms.py:10 forms.py:68
 msgid "Please enter the donation amount."
-msgstr ""
+msgstr "Por favor ingrese la cantidad de la donación."
 
 #: forms.py:11 forms.py:69
 msgid "Please select a payment method."
-msgstr ""
+msgstr "Por favor, seleccione un método de pago."
 
 #: forms.py:12 forms.py:70
 msgid "Paid by Check"
-msgstr ""
+msgstr "A cargo cheque"
 
 #: forms.py:13 forms.py:71
 msgid "Make Online Payment"
-msgstr ""
+msgstr "Hacer el pago en línea"
 
 #: forms.py:19 forms.py:77
 msgid "A valid e-mail address, please."
-msgstr ""
+msgstr "Una dirección de correo electrónico válida, por favor."
 
 #: forms.py:61 forms.py:144
 msgid "Please enter a positive number"
-msgstr ""
+msgstr "Por favor, introduzca un número positivo"
 
 #: forms.py:63 forms.py:146
 msgid "Please enter a numeric positive number"
-msgstr ""
+msgstr "Por favor, introduzca un número positivo numérico"
 
 #: management.py:9
 msgid "Donation Added"
-msgstr ""
+msgstr "Donación Agregado"
 
 #: management.py:9
 msgid "A donation has been added."
-msgstr ""
+msgstr "Una donación se ha añadido."
 
 #: models.py:15
 msgid "address line 2"
@@ -63,11 +64,11 @@ msgstr "referred by"
 
 #: templates/donations/add.html:43
 msgid "Donation Amount"
-msgstr ""
+msgstr "Cantidad de Donación"
 
 #: templates/donations/add.html:54
 msgid "Donate to"
-msgstr ""
+msgstr "Donar al"
 
 #: templates/donations/add.html:66
 msgid "Payment Method"
@@ -119,11 +120,11 @@ msgstr "Correo electronico"
 
 #: templates/donations/add.html:174
 msgid "Email Receipt?"
-msgstr ""
+msgstr "Recibo por correo electrónico?"
 
 #: templates/donations/add.html:187
 msgid "Referred by"
-msgstr ""
+msgstr "Referido por"
 
 #: templates/donations/add.html:196
 msgid "Comments"
@@ -131,7 +132,7 @@ msgstr "Comments"
 
 #: templates/donations/add.html:206
 msgid "Captcha"
-msgstr ""
+msgstr "Captcha"
 
 #: templates/donations/nav.html:18
 msgid "Tendenci"
@@ -151,7 +152,7 @@ msgstr "Cerrar Sesión"
 
 #: templates/donations/nav.html:32
 msgid "All Donations"
-msgstr ""
+msgstr "Todas las donaciones"
 
 #: templates/donations/nav.html:39
 msgid "Settings"
@@ -159,4 +160,4 @@ msgstr "Configuración"
 
 #: templates/donations/nav.html:47
 msgid "This Donation"
-msgstr ""
+msgstr "Esta donación"

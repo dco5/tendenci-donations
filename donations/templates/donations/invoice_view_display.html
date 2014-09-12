@@ -3,7 +3,7 @@
 <tr>
     <td>
 		{% if obj %}
-			Donation #<a href="{% url donation.view obj.id %}" title="View Donation">{{  obj.id }}</a> from {{  obj.first_name }} {{ obj.last_name}} ({{  obj.email }})
+			Donation #<a href="{% url "donation.view" obj.id %}" title="View Donation">{{  obj.id }}</a> from {{  obj.first_name }} {{ obj.last_name}} ({{  obj.email }})
 		{% else %}
 			Donation information not available
 		{% endif%}

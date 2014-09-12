@@ -1,9 +1,8 @@
 from haystack import indexes
-from haystack import site
 
 from donations.models import Donation
 
-class DonationIndex(indexes.RealTimeSearchIndex):
+class DonationIndex(indexes.SearchIndex):
     text = indexes.CharField(document=True, use_template=True)
     donation_amount = indexes.FloatField(model_attr='donation_amount')
     allocation = indexes.CharField(model_attr='allocation')
@@ -16,8 +15,9 @@ class DonationIndex(indexes.RealTimeSearchIndex):
     country = indexes.CharField(model_attr='country')
     email = indexes.CharField(model_attr='email')
     phone = indexes.CharField(model_attr='phone')
-    
+
+    def get_model(self):
+        return Donation
+
     def get_updated_field(self):
         return 'create_dt'
-
-site.register(Donation, DonationIndex)

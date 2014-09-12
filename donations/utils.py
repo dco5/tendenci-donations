@@ -3,7 +3,7 @@
 from datetime import datetime
 from django.contrib.contenttypes.models import ContentType
 from tendenci.apps.invoices.models import Invoice
-from tendenci.core.site_settings.utils import get_setting
+from tendenci.apps.site_settings.utils import get_setting
 
 def donation_inv_add(user, donation, **kwargs):
     inv = Invoice()

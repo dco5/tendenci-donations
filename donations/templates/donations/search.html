@@ -30,14 +30,14 @@
     	{% if can_view %}
 		<div class="donation-wrap-search">
 
-            <h2><a href="{% url donation.view donation.id %}">{{ donation.first_name}} {{ donation.last_name }}</a></h2>
+            <h2><a href="{% url "donation.view" donation.id %}">{{ donation.first_name}} {{ donation.last_name }}</a></h2>
             {% if donation.user %}
-            	<div class="donation-item-left"><a href="{% url profile donation.user.username %}">{% avatar donation.user 56 %}</a></div>
+            	<div class="donation-item-left"><a href="{% url "profile" donation.user.username %}">{% avatar donation.user 56 %}</a></div>
             {% endif %}
             <div class="donation-item-right">
 	            <div class="content">Invoice: 
 	            {% if donation.invoice %}
-	            	<a href="{% url invoice.view donation.invoice.id %}">{{ donation.invoice.id }}</a>
+	            	<a href="{% url "invoice.view" donation.invoice.id %}">{{ donation.invoice.id }}</a>
 	            {% else %}
 	            	n/a
 	            {% endif %}

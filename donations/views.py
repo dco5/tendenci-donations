@@ -7,14 +7,14 @@ from django.contrib.auth.models import User
 from donations.forms import DonationForm
 from donations.utils import donation_inv_add, donation_email_user
 from donations.models import Donation
-from tendenci.core.site_settings.utils import get_setting
-from tendenci.core.base.forms import CaptchaForm
-from tendenci.core.base.http import Http403
-from tendenci.core.base.utils import tcurrency
-from tendenci.core.event_logs.models import EventLog
-from tendenci.core.perms.utils import get_notice_recipients
-from tendenci.core.perms.utils import has_perm
-from tendenci.core.base.utils import get_unique_username
+from tendenci.apps.site_settings.utils import get_setting
+from tendenci.apps.base.forms import CaptchaForm
+from tendenci.apps.base.http import Http403
+from tendenci.apps.base.utils import tcurrency
+from tendenci.apps.event_logs.models import EventLog
+from tendenci.apps.perms.utils import get_notice_recipients
+from tendenci.apps.perms.utils import has_perm
+from tendenci.apps.base.utils import get_unique_username
 from tendenci.apps.profiles.models import Profile
 
 try:

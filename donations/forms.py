@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from donations.models import Donation
 from donations.utils import get_allocation_choices, get_payment_method_choices, get_preset_amount_choices
-from tendenci.core.site_settings.utils import get_setting
+from tendenci.apps.site_settings.utils import get_setting
 
 class DonationAdminForm(forms.ModelForm):
     # get the payment_method choices from settings
@@ -113,7 +113,7 @@ class DonationForm(forms.ModelForm):
             self.fields['last_name'].initial = self.user.last_name
             self.fields['email'].initial = self.user.email
             try:
-                profile = self.user.get_profile()
+                profile = self.user.profile
                 if profile:
                     self.fields['company'].initial = profile.company
                     self.fields['address'].initial = profile.address

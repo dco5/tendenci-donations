@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-12 20:53+0000\n"
-"PO-Revision-Date: 2014-10-02 23:40+0000\n"
+"PO-Revision-Date: 2014-10-04 12:31+0000\n"
 "Last-Translator: bleven <bleven@tendenci.com>\n"
 "Language-Team: Panjabi (Punjabi) (India) (http://www.transifex.com/projects/p/tendenci/language/pa_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -55,11 +55,11 @@ msgstr ""
 
 #: models.py:15
 msgid "address line 2"
-msgstr ""
+msgstr "ਪਤੇ ਨੂੰ ਲਾਈਨ 2"
 
 #: models.py:22
 msgid "referred by"
-msgstr ""
+msgstr "ਕੇ ਦਾ ਜ਼ਿਕਰ"
 
 #: templates/donations/add.html:43
 msgid "Donation Amount"
@@ -71,51 +71,51 @@ msgstr ""
 
 #: templates/donations/add.html:66
 msgid "Payment Method"
-msgstr ""
+msgstr "ਭੁਗਤਾਨੇ ਦੇ ਢੰਗ"
 
 #: templates/donations/add.html:80
 msgid "First Name"
-msgstr ""
+msgstr "ਪਹਿਲਾ ਨਾਂ"
 
 #: templates/donations/add.html:90
 msgid "Last Name"
-msgstr ""
+msgstr "ਆਖਰੀ ਨਾਂਮ"
 
 #: templates/donations/add.html:99
 msgid "Company"
-msgstr ""
+msgstr "ਕੰਪਨੀ"
 
 #: templates/donations/add.html:108
 msgid "Address"
-msgstr ""
+msgstr "ਪਤਾ"
 
 #: templates/donations/add.html:117
 msgid "Address Line 2"
-msgstr ""
+msgstr "ਪਤਾ ਲਾਈਨ 2"
 
 #: templates/donations/add.html:133
 msgid "City"
-msgstr ""
+msgstr "ਸਿਟੀ"
 
 #: templates/donations/add.html:134
 msgid "State"
-msgstr ""
+msgstr "ਸਟੇਟ"
 
 #: templates/donations/add.html:135
 msgid "Zip Code"
-msgstr ""
+msgstr "ਜ਼ਿੱਪ ਕੋਡ"
 
 #: templates/donations/add.html:145
 msgid "Country"
-msgstr ""
+msgstr "ਦੇਸ਼"
 
 #: templates/donations/add.html:155
 msgid "Phone"
-msgstr ""
+msgstr "ਫੋਨ"
 
 #: templates/donations/add.html:165
 msgid "Email"
-msgstr ""
+msgstr "ਈਮੇਲ"
 
 #: templates/donations/add.html:174
 msgid "Email Receipt?"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: templates/donations/add.html:196
 msgid "Comments"
-msgstr ""
+msgstr "Comments"
 
 #: templates/donations/add.html:206
 msgid "Captcha"
@@ -135,19 +135,19 @@ msgstr ""
 
 #: templates/donations/nav.html:18
 msgid "Tendenci"
-msgstr ""
+msgstr "ਝੁਕਾਅ"
 
 #: templates/donations/nav.html:20
 msgid "Dashboard"
-msgstr ""
+msgstr "ਡੈਸ਼ਬੋਰਡ"
 
 #: templates/donations/nav.html:21
 msgid "My Profile"
-msgstr ""
+msgstr "ਵਾਪਸ ਮੇਰੇ ਪ੍ਰੋਫ਼ਾਈਲ &#39;"
 
 #: templates/donations/nav.html:22
 msgid "Log Off"
-msgstr ""
+msgstr "ਲਾਗ ਆਫ"
 
 #: templates/donations/nav.html:32
 msgid "All Donations"
@@ -155,7 +155,7 @@ msgstr ""
 
 #: templates/donations/nav.html:39
 msgid "Settings"
-msgstr ""
+msgstr "ਸੈਟਿੰਗ"
 
 #: templates/donations/nav.html:47
 msgid "This Donation"

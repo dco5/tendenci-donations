@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-12 20:53+0000\n"
-"PO-Revision-Date: 2014-10-02 23:41+0000\n"
+"PO-Revision-Date: 2014-10-04 12:40+0000\n"
 "Last-Translator: bleven <bleven@tendenci.com>\n"
 "Language-Team: Spanish (Chile) (http://www.transifex.com/projects/p/tendenci/language/es_CL/)\n"
 "MIME-Version: 1.0\n"
@@ -55,11 +55,11 @@ msgstr ""
 
 #: models.py:15
 msgid "address line 2"
-msgstr ""
+msgstr "address line 2"
 
 #: models.py:22
 msgid "referred by"
-msgstr ""
+msgstr "referred by"
 
 #: templates/donations/add.html:43
 msgid "Donation Amount"
@@ -71,51 +71,51 @@ msgstr ""
 
 #: templates/donations/add.html:66
 msgid "Payment Method"
-msgstr ""
+msgstr "Payment Method"
 
 #: templates/donations/add.html:80
 msgid "First Name"
-msgstr ""
+msgstr "Primer Nombre"
 
 #: templates/donations/add.html:90
 msgid "Last Name"
-msgstr ""
+msgstr "Apellido"
 
 #: templates/donations/add.html:99
 msgid "Company"
-msgstr ""
+msgstr "Company"
 
 #: templates/donations/add.html:108
 msgid "Address"
-msgstr ""
+msgstr "Address"
 
 #: templates/donations/add.html:117
 msgid "Address Line 2"
-msgstr ""
+msgstr "Address Line 2"
 
 #: templates/donations/add.html:133
 msgid "City"
-msgstr ""
+msgstr "City"
 
 #: templates/donations/add.html:134
 msgid "State"
-msgstr ""
+msgstr "State"
 
 #: templates/donations/add.html:135
 msgid "Zip Code"
-msgstr ""
+msgstr "Zip Code"
 
 #: templates/donations/add.html:145
 msgid "Country"
-msgstr ""
+msgstr "Country"
 
 #: templates/donations/add.html:155
 msgid "Phone"
-msgstr ""
+msgstr "Phone"
 
 #: templates/donations/add.html:165
 msgid "Email"
-msgstr ""
+msgstr "Correo electronico"
 
 #: templates/donations/add.html:174
 msgid "Email Receipt?"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: templates/donations/add.html:196
 msgid "Comments"
-msgstr ""
+msgstr "Comments"
 
 #: templates/donations/add.html:206
 msgid "Captcha"
@@ -135,19 +135,19 @@ msgstr ""
 
 #: templates/donations/nav.html:18
 msgid "Tendenci"
-msgstr ""
+msgstr "Tendenci"
 
 #: templates/donations/nav.html:20
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 #: templates/donations/nav.html:21
 msgid "My Profile"
-msgstr ""
+msgstr "Mi Perfil"
 
 #: templates/donations/nav.html:22
 msgid "Log Off"
-msgstr ""
+msgstr "Cerrar Sesión"
 
 #: templates/donations/nav.html:32
 msgid "All Donations"
@@ -155,7 +155,7 @@ msgstr ""
 
 #: templates/donations/nav.html:39
 msgid "Settings"
-msgstr ""
+msgstr "Configuración"
 
 #: templates/donations/nav.html:47
 msgid "This Donation"

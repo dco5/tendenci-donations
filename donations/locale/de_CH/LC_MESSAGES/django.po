@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-12 20:53+0000\n"
-"PO-Revision-Date: 2014-10-04 12:21+0000\n"
+"PO-Revision-Date: 2014-10-13 20:41+0000\n"
 "Last-Translator: bleven <bleven@tendenci.com>\n"
 "Language-Team: German (Switzerland) (http://www.transifex.com/projects/p/tendenci/language/de_CH/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: forms.py:11 forms.py:69
 msgid "Please select a payment method."
-msgstr ""
+msgstr "Bitte wählen Sie eine Zahlungsmethode."
 
 #: forms.py:12 forms.py:70
 msgid "Paid by Check"
@@ -31,11 +31,11 @@ msgstr ""
 
 #: forms.py:13 forms.py:71
 msgid "Make Online Payment"
-msgstr ""
+msgstr "Machen Online-Zahlung"
 
 #: forms.py:19 forms.py:77
 msgid "A valid e-mail address, please."
-msgstr ""
+msgstr "Eine gültige E-Mail-Adresse, bitte."
 
 #: forms.py:61 forms.py:144
 msgid "Please enter a positive number"

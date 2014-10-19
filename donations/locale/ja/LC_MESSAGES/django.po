@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-12 20:53+0000\n"
-"PO-Revision-Date: 2014-10-14 18:17+0000\n"
+"PO-Revision-Date: 2014-10-19 00:30+0000\n"
 "Last-Translator: bleven <bleven@tendenci.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/tendenci/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: forms.py:11 forms.py:69
 msgid "Please select a payment method."
-msgstr ""
+msgstr "支払い方法を選択してください。"
 
 #: forms.py:12 forms.py:70
 msgid "Paid by Check"
@@ -31,11 +31,11 @@ msgstr ""
 
 #: forms.py:13 forms.py:71
 msgid "Make Online Payment"
-msgstr ""
+msgstr "オンライン決済を行います"
 
 #: forms.py:19 forms.py:77
 msgid "A valid e-mail address, please."
-msgstr ""
+msgstr "有効な電子メールアドレスでお願いします。"
 
 #: forms.py:61 forms.py:144
 msgid "Please enter a positive number"
@@ -55,11 +55,11 @@ msgstr ""
 
 #: models.py:15
 msgid "address line 2"
-msgstr ""
+msgstr "住所2行目"
 
 #: models.py:22
 msgid "referred by"
-msgstr ""
+msgstr "で参照される"
 
 #: templates/donations/add.html:43
 msgid "Donation Amount"
@@ -71,51 +71,51 @@ msgstr ""
 
 #: templates/donations/add.html:66
 msgid "Payment Method"
-msgstr ""
+msgstr "支払方法"
 
 #: templates/donations/add.html:80
 msgid "First Name"
-msgstr ""
+msgstr "名前"
 
 #: templates/donations/add.html:90
 msgid "Last Name"
-msgstr ""
+msgstr "姓"
 
 #: templates/donations/add.html:99
 msgid "Company"
-msgstr ""
+msgstr "会社"
 
 #: templates/donations/add.html:108
 msgid "Address"
-msgstr ""
+msgstr "アドレス"
 
 #: templates/donations/add.html:117
 msgid "Address Line 2"
-msgstr ""
+msgstr "住所2行目"
 
 #: templates/donations/add.html:133
 msgid "City"
-msgstr ""
+msgstr "シティ"
 
 #: templates/donations/add.html:134
 msgid "State"
-msgstr ""
+msgstr "状態"
 
 #: templates/donations/add.html:135
 msgid "Zip Code"
-msgstr ""
+msgstr "郵便番号"
 
 #: templates/donations/add.html:145
 msgid "Country"
-msgstr ""
+msgstr "カントリー"
 
 #: templates/donations/add.html:155
 msgid "Phone"
-msgstr ""
+msgstr "電話"
 
 #: templates/donations/add.html:165
 msgid "Email"
-msgstr ""
+msgstr "Eメール"
 
 #: templates/donations/add.html:174
 msgid "Email Receipt?"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: templates/donations/add.html:196
 msgid "Comments"
-msgstr ""
+msgstr "コメント"
 
 #: templates/donations/add.html:206
 msgid "Captcha"
@@ -135,19 +135,19 @@ msgstr ""
 
 #: templates/donations/nav.html:18
 msgid "Tendenci"
-msgstr ""
+msgstr "傾向"
 
 #: templates/donations/nav.html:20
 msgid "Dashboard"
-msgstr ""
+msgstr "ダッシュボード"
 
 #: templates/donations/nav.html:21
 msgid "My Profile"
-msgstr ""
+msgstr "マイプロフィール"
 
 #: templates/donations/nav.html:22
 msgid "Log Off"
-msgstr ""
+msgstr "ログオフする"
 
 #: templates/donations/nav.html:32
 msgid "All Donations"
@@ -155,7 +155,7 @@ msgstr ""
 
 #: templates/donations/nav.html:39
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: templates/donations/nav.html:47
 msgid "This Donation"

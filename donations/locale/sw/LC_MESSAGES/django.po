@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-12 20:53+0000\n"
-"PO-Revision-Date: 2014-10-14 18:19+0000\n"
+"PO-Revision-Date: 2014-10-19 00:30+0000\n"
 "Last-Translator: bleven <bleven@tendenci.com>\n"
 "Language-Team: Swahili (http://www.transifex.com/projects/p/tendenci/language/sw/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: forms.py:11 forms.py:69
 msgid "Please select a payment method."
-msgstr ""
+msgstr "Tafadhali kuchagua njia ya malipo."
 
 #: forms.py:12 forms.py:70
 msgid "Paid by Check"
@@ -31,11 +31,11 @@ msgstr ""
 
 #: forms.py:13 forms.py:71
 msgid "Make Online Payment"
-msgstr ""
+msgstr "Kufanya Online Malipo"
 
 #: forms.py:19 forms.py:77
 msgid "A valid e-mail address, please."
-msgstr ""
+msgstr "anwani halali ya barua pepe, tafadhali."
 
 #: forms.py:61 forms.py:144
 msgid "Please enter a positive number"
@@ -55,11 +55,11 @@ msgstr ""
 
 #: models.py:15
 msgid "address line 2"
-msgstr ""
+msgstr "anwani line 2"
 
 #: models.py:22
 msgid "referred by"
-msgstr ""
+msgstr "inajulikana kwa"
 
 #: templates/donations/add.html:43
 msgid "Donation Amount"
@@ -71,51 +71,51 @@ msgstr ""
 
 #: templates/donations/add.html:66
 msgid "Payment Method"
-msgstr ""
+msgstr "Malipo Method"
 
 #: templates/donations/add.html:80
 msgid "First Name"
-msgstr ""
+msgstr "Jina la kwanza"
 
 #: templates/donations/add.html:90
 msgid "Last Name"
-msgstr ""
+msgstr "Jina la Mwisho"
 
 #: templates/donations/add.html:99
 msgid "Company"
-msgstr ""
+msgstr "Kampuni"
 
 #: templates/donations/add.html:108
 msgid "Address"
-msgstr ""
+msgstr "Anwani"
 
 #: templates/donations/add.html:117
 msgid "Address Line 2"
-msgstr ""
+msgstr "Anwani Line 2"
 
 #: templates/donations/add.html:133
 msgid "City"
-msgstr ""
+msgstr "Mji"
 
 #: templates/donations/add.html:134
 msgid "State"
-msgstr ""
+msgstr "Hali"
 
 #: templates/donations/add.html:135
 msgid "Zip Code"
-msgstr ""
+msgstr "Zip Code"
 
 #: templates/donations/add.html:145
 msgid "Country"
-msgstr ""
+msgstr "Nchi"
 
 #: templates/donations/add.html:155
 msgid "Phone"
-msgstr ""
+msgstr "Simu"
 
 #: templates/donations/add.html:165
 msgid "Email"
-msgstr ""
+msgstr "Barua pepe"
 
 #: templates/donations/add.html:174
 msgid "Email Receipt?"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: templates/donations/add.html:196
 msgid "Comments"
-msgstr ""
+msgstr "Maoni"
 
 #: templates/donations/add.html:206
 msgid "Captcha"
@@ -135,19 +135,19 @@ msgstr ""
 
 #: templates/donations/nav.html:18
 msgid "Tendenci"
-msgstr ""
+msgstr "tabia"
 
 #: templates/donations/nav.html:20
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 #: templates/donations/nav.html:21
 msgid "My Profile"
-msgstr ""
+msgstr "Profile yangu"
 
 #: templates/donations/nav.html:22
 msgid "Log Off"
-msgstr ""
+msgstr "Ingia Off"
 
 #: templates/donations/nav.html:32
 msgid "All Donations"
@@ -155,7 +155,7 @@ msgstr ""
 
 #: templates/donations/nav.html:39
 msgid "Settings"
-msgstr ""
+msgstr "Settings"
 
 #: templates/donations/nav.html:47
 msgid "This Donation"

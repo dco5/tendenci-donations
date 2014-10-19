@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-12 20:53+0000\n"
-"PO-Revision-Date: 2014-10-14 18:15+0000\n"
+"PO-Revision-Date: 2014-10-19 00:30+0000\n"
 "Last-Translator: bleven <bleven@tendenci.com>\n"
 "Language-Team: Hebrew (http://www.transifex.com/projects/p/tendenci/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: forms.py:11 forms.py:69
 msgid "Please select a payment method."
-msgstr ""
+msgstr "אנא בחר את שיטת תשלום."
 
 #: forms.py:12 forms.py:70
 msgid "Paid by Check"
@@ -31,11 +31,11 @@ msgstr ""
 
 #: forms.py:13 forms.py:71
 msgid "Make Online Payment"
-msgstr ""
+msgstr "בצעת תשלום באינטרנט"
 
 #: forms.py:19 forms.py:77
 msgid "A valid e-mail address, please."
-msgstr ""
+msgstr "כתובת דואר אלקטרוני חוקית, בבקשה."
 
 #: forms.py:61 forms.py:144
 msgid "Please enter a positive number"
@@ -55,11 +55,11 @@ msgstr ""
 
 #: models.py:15
 msgid "address line 2"
-msgstr ""
+msgstr "שורת כתובת 2"
 
 #: models.py:22
 msgid "referred by"
-msgstr ""
+msgstr "הופנה על ידי"
 
 #: templates/donations/add.html:43
 msgid "Donation Amount"
@@ -71,51 +71,51 @@ msgstr ""
 
 #: templates/donations/add.html:66
 msgid "Payment Method"
-msgstr ""
+msgstr "שיטת תשלום"
 
 #: templates/donations/add.html:80
 msgid "First Name"
-msgstr ""
+msgstr "שם פרטי"
 
 #: templates/donations/add.html:90
 msgid "Last Name"
-msgstr ""
+msgstr "שם משפחה"
 
 #: templates/donations/add.html:99
 msgid "Company"
-msgstr ""
+msgstr "חברה"
 
 #: templates/donations/add.html:108
 msgid "Address"
-msgstr ""
+msgstr "כתובת"
 
 #: templates/donations/add.html:117
 msgid "Address Line 2"
-msgstr ""
+msgstr "שורת כתובת 2"
 
 #: templates/donations/add.html:133
 msgid "City"
-msgstr ""
+msgstr "עיר"
 
 #: templates/donations/add.html:134
 msgid "State"
-msgstr ""
+msgstr "מדינה"
 
 #: templates/donations/add.html:135
 msgid "Zip Code"
-msgstr ""
+msgstr "מיקוד"
 
 #: templates/donations/add.html:145
 msgid "Country"
-msgstr ""
+msgstr "מדינה"
 
 #: templates/donations/add.html:155
 msgid "Phone"
-msgstr ""
+msgstr "טלפון"
 
 #: templates/donations/add.html:165
 msgid "Email"
-msgstr ""
+msgstr "דוא&quot;ל"
 
 #: templates/donations/add.html:174
 msgid "Email Receipt?"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: templates/donations/add.html:196
 msgid "Comments"
-msgstr ""
+msgstr "תגובות"
 
 #: templates/donations/add.html:206
 msgid "Captcha"
@@ -135,19 +135,19 @@ msgstr ""
 
 #: templates/donations/nav.html:18
 msgid "Tendenci"
-msgstr ""
+msgstr "הנטייה"
 
 #: templates/donations/nav.html:20
 msgid "Dashboard"
-msgstr ""
+msgstr "לוח מחוונים"
 
 #: templates/donations/nav.html:21
 msgid "My Profile"
-msgstr ""
+msgstr "הפרופיל שלי"
 
 #: templates/donations/nav.html:22
 msgid "Log Off"
-msgstr ""
+msgstr "התנתקות"
 
 #: templates/donations/nav.html:32
 msgid "All Donations"
@@ -155,7 +155,7 @@ msgstr ""
 
 #: templates/donations/nav.html:39
 msgid "Settings"
-msgstr ""
+msgstr "הגדרות"
 
 #: templates/donations/nav.html:47
 msgid "This Donation"

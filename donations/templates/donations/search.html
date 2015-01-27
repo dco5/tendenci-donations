@@ -18,7 +18,6 @@
 
 {% block body %}
 <div class="t">
-{% donation_nav request.user %}
     <h1>{% firstof MODULE_DONATIONS_LABEL trans 'Donations' %} {% trans 'Search' %}</h1>
 
 	{% donation_search %}

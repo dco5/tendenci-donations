@@ -1,11 +1,12 @@
 {% load base_filters %}
+{% load i18n %}
 
 <tr>
     <td>
 		{% if obj %}
-			Donation #<a href="{% url "donation.view" obj.id %}" title="View Donation">{{  obj.id }}</a> from {{  obj.first_name }} {{ obj.last_name}} ({{  obj.email }})
+			{% trans 'Donation #' %}<a href="{% url 'donation.view' obj.id %}" title="{% trans 'View Donation' %}">{{  obj.id }}</a> from {{  obj.first_name }} {{ obj.last_name}} ({{  obj.email }})
 		{% else %}
-			Donation information not available
+			{% trans 'Donation information not available' %}
 		{% endif%}
 	</td>
 	<td class="td-right">

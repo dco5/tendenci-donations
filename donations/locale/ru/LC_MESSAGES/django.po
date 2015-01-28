@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Oxana, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-12 20:53+0000\n"
-"PO-Revision-Date: 2014-09-12 03:55+0000\n"
-"Last-Translator: Ed Schipul <eschipul@tendenci.com>\n"
+"PO-Revision-Date: 2014-10-19 22:56+0000\n"
+"Last-Translator: Oxana\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/tendenci/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,103 +20,103 @@ msgstr ""
 
 #: forms.py:10 forms.py:68
 msgid "Please enter the donation amount."
-msgstr ""
+msgstr "Пожалуйста, введите сумму пожертвования."
 
 #: forms.py:11 forms.py:69
 msgid "Please select a payment method."
-msgstr ""
+msgstr "Пожалуйста, выберите способ оплаты."
 
 #: forms.py:12 forms.py:70
 msgid "Paid by Check"
-msgstr ""
+msgstr "Оплачено чеком"
 
 #: forms.py:13 forms.py:71
 msgid "Make Online Payment"
-msgstr ""
+msgstr "Сделать оплату онлайн"
 
 #: forms.py:19 forms.py:77
 msgid "A valid e-mail address, please."
-msgstr ""
+msgstr "Существующий адрес электронной почты, пожалуйста."
 
 #: forms.py:61 forms.py:144
 msgid "Please enter a positive number"
-msgstr ""
+msgstr "Пожалуйста, введите положительное число"
 
 #: forms.py:63 forms.py:146
 msgid "Please enter a numeric positive number"
-msgstr ""
+msgstr "Пожалуйста, введите числовое положительное число"
 
 #: management.py:9
 msgid "Donation Added"
-msgstr ""
+msgstr "Пожертвование Добавлено"
 
 #: management.py:9
 msgid "A donation has been added."
-msgstr ""
+msgstr "Пожертвование было добавлено."
 
 #: models.py:15
 msgid "address line 2"
-msgstr ""
+msgstr "адресная строка 2"
 
 #: models.py:22
 msgid "referred by"
-msgstr ""
+msgstr "отнесено"
 
 #: templates/donations/add.html:43
 msgid "Donation Amount"
-msgstr ""
+msgstr "Сумма пожертвования"
 
 #: templates/donations/add.html:54
 msgid "Donate to"
-msgstr ""
+msgstr "Пожертвуйте"
 
 #: templates/donations/add.html:66
 msgid "Payment Method"
-msgstr ""
+msgstr "Способ оплаты"
 
 #: templates/donations/add.html:80
 msgid "First Name"
-msgstr ""
+msgstr "Имя"
 
 #: templates/donations/add.html:90
 msgid "Last Name"
-msgstr ""
+msgstr "Фамилия"
 
 #: templates/donations/add.html:99
 msgid "Company"
-msgstr ""
+msgstr "Компания"
 
 #: templates/donations/add.html:108
 msgid "Address"
-msgstr ""
+msgstr "Адрес"
 
 #: templates/donations/add.html:117
 msgid "Address Line 2"
-msgstr ""
+msgstr "Адресная строка 2"
 
 #: templates/donations/add.html:133
 msgid "City"
-msgstr ""
+msgstr "Город"
 
 #: templates/donations/add.html:134
 msgid "State"
-msgstr ""
+msgstr "Штат"
 
 #: templates/donations/add.html:135
 msgid "Zip Code"
-msgstr ""
+msgstr "Почтовый индекс"
 
 #: templates/donations/add.html:145
 msgid "Country"
-msgstr ""
+msgstr "Страна"
 
 #: templates/donations/add.html:155
 msgid "Phone"
-msgstr ""
+msgstr "Телефон"
 
 #: templates/donations/add.html:165
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: templates/donations/add.html:174
 msgid "Email Receipt?"
@@ -127,7 +128,7 @@ msgstr ""
 
 #: templates/donations/add.html:196
 msgid "Comments"
-msgstr ""
+msgstr "Комментарии"
 
 #: templates/donations/add.html:206
 msgid "Captcha"
@@ -135,7 +136,7 @@ msgstr ""
 
 #: templates/donations/nav.html:18
 msgid "Tendenci"
-msgstr ""
+msgstr "Тенденция"
 
 #: templates/donations/nav.html:20
 msgid "Dashboard"
@@ -143,20 +144,20 @@ msgstr ""
 
 #: templates/donations/nav.html:21
 msgid "My Profile"
-msgstr ""
+msgstr "Мой профиль"
 
 #: templates/donations/nav.html:22
 msgid "Log Off"
-msgstr ""
+msgstr "Выход"
 
 #: templates/donations/nav.html:32
 msgid "All Donations"
-msgstr ""
+msgstr "Все Пожертвования"
 
 #: templates/donations/nav.html:39
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: templates/donations/nav.html:47
 msgid "This Donation"
-msgstr ""
+msgstr "Это Пожертвование"

@@ -1,9 +1,8 @@
 from haystack import indexes
 
 from donations.models import Donation
-from tendenci.apps.perms.indexes import TendenciBaseSearchIndex
 
-class DonationIndex(TendenciBaseSearchIndex):
+class DonationIndex(indexes.SearchIndex):
     text = indexes.CharField(document=True, use_template=True)
     donation_amount = indexes.FloatField(model_attr='donation_amount')
     allocation = indexes.CharField(model_attr='allocation')

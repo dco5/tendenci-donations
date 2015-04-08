@@ -17,6 +17,7 @@ class DonationIndex(TendenciBaseSearchIndex):
     email = indexes.CharField(model_attr='email')
     phone = indexes.CharField(model_attr='phone')
 
+    @classmethod
     def get_model(self):
         return Donation
 

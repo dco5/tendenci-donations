@@ -75,7 +75,7 @@ class DonationForm(forms.ModelForm):
     zip_code = forms.CharField(max_length=20, required=False, widget=forms.TextInput(attrs={'size':'10'}))
     referral_source = forms.CharField(max_length=200, required=False, widget=forms.TextInput(attrs={'size':'40'}))
     email = forms.EmailField(help_text=_('A valid e-mail address, please.'))
-    email_receipt = forms.BooleanField(initial=True)
+    email_receipt = forms.BooleanField(initial=True, required=False)
     comments = forms.CharField(max_length=1000, required=False,
                                widget=forms.Textarea(attrs={'rows':'3'}))
     allocation = forms.ChoiceField()

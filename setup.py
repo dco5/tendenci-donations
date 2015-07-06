@@ -9,7 +9,7 @@ setup(
     name='tendenci-donations',
     author='Schipul',
     author_email='programmers@schipul.com',
-    version='6.0.5',
+    version='6.0.6',
     license='GPL3',
     description='Donations addon for Tendenci',
     long_description=longdesc,

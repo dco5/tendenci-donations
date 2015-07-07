@@ -34,6 +34,9 @@ class Donation(models.Model):
     status = models.NullBooleanField(default=True)
 
     objects = DonationManager()
+    
+    class Meta:
+        app_label = 'donations'
 
     def save(self, user=None, *args, **kwargs):
         if not self.id:

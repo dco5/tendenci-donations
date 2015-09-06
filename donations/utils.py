@@ -5,9 +5,10 @@ from django.contrib.contenttypes.models import ContentType
 from tendenci.apps.invoices.models import Invoice
 from tendenci.apps.site_settings.utils import get_setting
 
+
 def donation_inv_add(user, donation, **kwargs):
     inv = Invoice()
-    inv.title = "Donation Invoice"
+    inv.title = "Sponsorship Invoice"
     inv.bill_to = donation.first_name + ' ' + donation.last_name
     inv.bill_to_first_name = donation.first_name
     inv.bill_to_last_name = donation.last_name
@@ -86,7 +87,8 @@ def get_payment_method_choices(user):
             return [(item, item) for item in donation_payment_types_list]
         else:
             return ()
-        
+
+
 def get_allocation_choices(user, allocation_str):
     #allocation_str = get_setting('module', 'donations', 'donationsallocations')
     if allocation_str:
@@ -96,7 +98,8 @@ def get_allocation_choices(user, allocation_str):
         return [(item, item) for item in allocation_list]
     else:
         return ()
-    
+
+
 def get_preset_amount_choices(preset_amount_str):
     if preset_amount_str:
         preset_amount_list = preset_amount_str.split(',')
